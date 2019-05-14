@@ -1,0 +1,19 @@
+#carouselExampleIndicators{
+  max-height: 500px;
+}
+.carousel-inner{
+  max-height: 500px;
+}
+
+.jumbotron-fluid{
+  max-height: 200px;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+}
+.container{
+  max-height: 100px;
+}
+section{
+  min-height: calc(100vh - calc(60px + 70px));
+}
