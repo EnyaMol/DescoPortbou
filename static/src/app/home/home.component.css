@@ -1,19 +1,31 @@
-#carouselExampleIndicators{
-  max-height: 500px;
-}
-.carousel-inner{
-  max-height: 500px;
+@media (min-width: 576px)and (max-width: 768px) {
+  .carousel-caption {
+    background-color: rgb(43, 102, 154, 0.8);
+  }
 }
 
-.jumbotron-fluid{
-  max-height: 200px;
-  padding: 10px;
-  text-align: center;
-  margin: 0;
+@media (min-width: 769px ) and (max-width: 991px) {
+  .carousel-caption {
+    background-color: rgb(43, 102, 154, 0.8);
+  }
 }
-.container{
-  max-height: 100px;
-}
-section{
-  min-height: calc(100vh - calc(60px + 70px));
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #carouselExampleIndicators{
+  max-height: 80%;
+  }
+  .carousel-inner{
+    max-height: 80%;
+  }
+  .carousel-item{
+    max-height: 80%;
+  }
+  section{
+    min-height: 80%;
+  }
+
+  .carousel-caption{
+    background-color: rgb(43,102,154,0.8);
+    max-height: 50%;
+  }
 }
