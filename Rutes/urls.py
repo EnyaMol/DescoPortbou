@@ -6,5 +6,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.json, name='json'),
+    path('', views.json, name='jsonruta')
 ]

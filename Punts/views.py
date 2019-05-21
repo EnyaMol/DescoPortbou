@@ -2,17 +2,23 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
-import Rutes
-from Rutes.models import Ruta
+import Punts
+from Punts.models import Punt
 
 
 def json(request):
-    rutas = Ruta.objects.all()
-    nomruta = Ruta.nomruta
-    descripcio = Ruta.descripcio
-    distancia_km = Ruta.distancia_km
-    dificultat = Ruta.dificultat
-    categoria = {'nomruta': nomruta, 'descripcio': descripcio, 'distanciakm' : distancia_km,'dificultat': dificultat}
+    punt = Punt.objects.all()
+    contador = 0;
+    pu = []
+    for pun in punt:
+        contador=contador+1
+        nompunt = pun.nompunt
+        descripcio = pun.descripcio
+        longitud = pun.latitud
+        latitud = pun.longitud
+        punts = {'nompunt': nompunt, 'descripcio': descripcio, 'longitud': longitud, 'latitud': latitud}
+        pu.append(punts)
 
+    punts = {'punts': pu}
 
-    return JsonResponse(categoria)
+    return JsonResponse(punts)

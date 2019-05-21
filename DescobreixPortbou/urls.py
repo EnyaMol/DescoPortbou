@@ -21,13 +21,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="index.html"), name="index"),
-    path('inici/', TemplateView.as_view(template_name="index.html"), name="index"),
-    path('rutes/', TemplateView.as_view(template_name="rutes.html"), name="rutes"),
-    path('rutes/ruta', TemplateView.as_view(template_name="rutapeque.html"), name="ruta"),
-    path('punts/', TemplateView.as_view(template_name="punts.html"), name="punts"),
-    path('punts/punt', TemplateView.as_view(template_name="puntspeque.html"), name="punt"),
-    path('acces/', TemplateView.as_view(template_name="acces.html"), name="acces"),
-    path('api/', include('api.urls')),
-    path('apirutes/', include('Rutes.urls'))
+    path('apirutes/', include('Rutes.urls')),
+    path('apipunts/', include('Punts.urls')),
+    path('api/', include('api.urls'))
 ]
